@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>
-			This is a test page
-		</title>
+		<title>This is a test page</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	
 	<body style="background-image:url(28.jpg)">
 		
-		<marquee behav><h1 style="color:tomato">My name is Minhaz!</h1></marquee>
-		
+		<div class="frm">
+			<form id="form" action="index.html">
+				
+				<div class="form_elmnts">
+					<label class="lbl">First Name:</label><br><input  class="txt" type="text" placeholder="First Nmae" id="fname"></input><br>
+				
+					<label class="lbl">Last Name:</label><br><input class="txt" type="text" placeholder="Last Nmae" id="lname"></input><br>
+					
+					<label class="lbl">E-mail:</label><br><input class="txt" type="email" placeholder="E-mail" id="email"></input><br>
+					
+					<p id="email"><p>
+					
+					<label class="lbl">Gender:</label><br>
+					<input type="radio" id="male" value="male" checked> Male<br>
+					<input type="radio" id="female" value="female"> Female<br>
+					<input type="radio" id="other" value="other"> Other<br>
+					<p id=""><p>
+					<label class="lbl">Password:</label><br><input class="txt" type="password" placeholder="Password" id="pass1"></input><br>
+					
+					<label class="lbl">Confirm password:</label><br><input class="txt" type="password" placeholder="Confirm Password" id="pass2"></input><br>
+					<p id="pass"></p>
+					
+					<input type="submit" onclick="formValidation()" value="Submit"></input>
+				</div>
+				
+			</form>
+			
+		</div>
+		<script src="js/form.js">
+			var pass1 = document.getElementByID("fname").value;
+			document.write(pass1);
+		</script>
 	</body>
 </html>
