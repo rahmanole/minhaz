@@ -23,7 +23,10 @@ body{
 }
 
 .container{
-	
+	display:block;
+	position:relative;
+	padding-left:5ppx;
+	cursor:pointer;
 }
 
 .btn{
