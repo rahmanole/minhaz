@@ -1,55 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>This is a test page</title>
+		<title>User resistration form</title>
 		
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	
-	<body style="background-image:url(28.jpg)">
+	<body style="background-image:url(img/body-bc.jpg);">
 		
-		<div class="frm">
-			<form id="form" method="post">
+		<div class="myfrm">
+			<form id="form" method="get">
 				
-				<div class="form_elmnts">
-					<label class="lbl">First Name:</label><br><input  class="txt" type="text" placeholder="First Nmae" id="fname"/><br>
+				<label>First Name</label><br>
+				<input class="txt_frm" type="text" name="fname" placeholder="First name..."/>
+				<label>Last Name</label><br>
+				<input class="txt_frm" type="text" name="lname" placeholder="Last name..."/>
+				<label>E-mail</label><br>
+				<input class="txt_frm" type="email" name="name" placeholder="Enter Your email..."/>
 				
-					<label class="lbl">Last Name:</label><br><input class="txt" type="text" placeholder="Last Nmae" id="lname"/><br>
-					
-					<label class="lbl">E-mail:</label><br><input class="txt" type="email" placeholder="E-mail" id="email"/><br>
-					
-					<p id="email"><p>
-					
-					<label class="lbl">Gender:</label><br>
-					<input type="radio" id="male" name="gender" checked value="m"/> Male<br>
-					<input type="radio" id="female" name="gender" value="f"/> Female<br>
-					<input type="radio" id="other" name="gender" value="other"/> Other<br>
-					<p id=""><p>
-					<label class="lbl">Password:</label><br><input class="txt" type="password" placeholder="Password" id="pass1"/><br>
-					
-					<label class="lbl">Confirm password:</label><br><input class="txt" type="password" placeholder="Confirm Password" id="pass2"/><br>
-					<p id="pass"></p>
-					
-					<button type="button" onclick="formValidation()">Click</button>
-				</div>
+				<label for="country">Country</label><br>
+				<select>
+					<option value="bangladesh">Bangladesh</option>
+					<option value="india">India</option>
+					<option value="Pakistan">Pakistan</option>
+				</select>
+				<label>Skills</label><br>
+				<label class="container">
+				  <input type="checkbox" checked="checked">
+				  Java<span class="checkmark"></span>
+				</label><br>
+				<label class="container">
+				  <input type="checkbox" checked="checked">
+				  Python<span class="checkmark"></span>
+				</label><br>
+				<label class="container">
+				  <input type="checkbox" checked="checked">
+				  JavaScript<span class="checkmark"></span>
+				</label><br>
+				
+				<input class="btn" type="submit" value="Submit"/>
 				
 			</form>
 			
 		</div>
-		<script>
-			
-			function formValidation(){
-	var pass1 = document.getElementById("pass1").value;
-	var pass2 = document.getElementById("pass2").value;
-
-	if(pass1==pass2){
-		document.getElementById('pass').innerHTML ="<h3>Password matched!</h3>";
-
-	}else{
-		document.getElementById('pass').innerHTML="<h3>Password Not matched!</h3>";
-	}
-	
-}
+		<script src="js/form.js">
 		</script>
 	</body>
 </html>
