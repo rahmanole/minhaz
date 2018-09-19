@@ -24,7 +24,7 @@ body{
 
 .container{
 	display:block;
-	position:relative;
+	position:reative;
 	padding-left:5ppx;
 	cursor:pointer;
 }
