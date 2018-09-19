@@ -9,36 +9,47 @@
 	<body style="background-image:url(28.jpg)">
 		
 		<div class="frm">
-			<form id="form" action="index.html">
+			<form id="form" method="post">
 				
 				<div class="form_elmnts">
-					<label class="lbl">First Name:</label><br><input  class="txt" type="text" placeholder="First Nmae" id="fname"></input><br>
+					<label class="lbl">First Name:</label><br><input  class="txt" type="text" placeholder="First Nmae" id="fname"/><br>
 				
-					<label class="lbl">Last Name:</label><br><input class="txt" type="text" placeholder="Last Nmae" id="lname"></input><br>
+					<label class="lbl">Last Name:</label><br><input class="txt" type="text" placeholder="Last Nmae" id="lname"/><br>
 					
-					<label class="lbl">E-mail:</label><br><input class="txt" type="email" placeholder="E-mail" id="email"></input><br>
+					<label class="lbl">E-mail:</label><br><input class="txt" type="email" placeholder="E-mail" id="email"/><br>
 					
 					<p id="email"><p>
 					
 					<label class="lbl">Gender:</label><br>
-					<input type="radio" id="male" value="male" checked> Male<br>
-					<input type="radio" id="female" value="female"> Female<br>
-					<input type="radio" id="other" value="other"> Other<br>
+					<input type="radio" id="male" name="gender" checked value="m"/> Male<br>
+					<input type="radio" id="female" name="gender" value="f"/> Female<br>
+					<input type="radio" id="other" name="gender" value="other"/> Other<br>
 					<p id=""><p>
-					<label class="lbl">Password:</label><br><input class="txt" type="password" placeholder="Password" id="pass1"></input><br>
+					<label class="lbl">Password:</label><br><input class="txt" type="password" placeholder="Password" id="pass1"/><br>
 					
-					<label class="lbl">Confirm password:</label><br><input class="txt" type="password" placeholder="Confirm Password" id="pass2"></input><br>
+					<label class="lbl">Confirm password:</label><br><input class="txt" type="password" placeholder="Confirm Password" id="pass2"/><br>
 					<p id="pass"></p>
 					
-					<input type="submit" onclick="formValidation()" value="Submit"></input>
+					<button type="button" onclick="formValidation()">Click</button>
 				</div>
 				
 			</form>
 			
 		</div>
-		<script src="js/form.js">
-			var pass1 = document.getElementByID("fname").value;
-			document.write(pass1);
+		<script>
+			
+			function formValidation(){
+	var pass1 = document.getElementById("pass1").value;
+	var pass2 = document.getElementById("pass2").value;
+
+	if(pass1==pass2){
+		document.getElementById('pass').innerHTML ="<h3>Password matched!</h3>";
+
+	}else{
+		document.getElementById('pass').innerHTML="<h3>Password Not matched!</h3>";
+	}
+	
+}
 		</script>
 	</body>
 </html>
